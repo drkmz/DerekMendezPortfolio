@@ -3,145 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Derek Mendez Portfolio — Web Developer & IT Specialist based in New York." />
-  <title>Derek Mendez Portfolio</title>
+  <meta name="description" content="Derek Mendez - Web Developer & IT Specialist based in New York." />
+  <title>Derek Mendez</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!--Navigation Top Bar-->
-  <nav>
-    <div class="nav-inner">
-      <a class="nav-logo" href="index.html">Derek <span>Mendez</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/projects.html">Projects</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-      </ul>
-<!--      Hamburger for mobile-->
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<!--Navigation Top Bar-->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Derek <span>Mendez</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <!--Hamburger for mobile-->
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-  <!--Mobile Menu-->
-  <div class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="pages/about.html">About</a>
-    <a href="pages/projects.html">Projects</a>
-    <a href="pages/contact.html">Contact</a>
+<!--Mobile Menu-->
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="pages/about.html">About</a>
+  <a href="pages/contact.html">Contact</a>
+</div>
+
+<!--Hero Section-->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-eyebrow">
+      <span>Web Developer &amp; IT Specialist</span>
+    </div>
+
+    <h1>Derek<br /><em>Mendez</em></h1>
+
+    <p class="hero-description">
+      Building clean, functional websites for real businesses and clients.
+      Based in New York, finishing my Bachelor's and always working on something new.
+    </p>
+
+    <!--Links in hero section-->
+    <div class="hero-links">
+      <a href="https://github.com/drkmz" target="_blank" rel="noopener">
+        <!--GitHub icon-->
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/derekmendez" target="_blank" rel="noopener">
+        <!--LinkedIn icon-->
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="#projects">
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        View Work
+      </a>
+    </div>
   </div>
 
-  <!--Hero Section-->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-eyebrow">
-        <span>Web Developer &amp; IT Specialist</span>
-      </div>
+  <!--Scroll indicator-->
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
 
-      <h1>Derek<br /><em>Mendez</em></h1>
+<!--Projects Section-->
+<section class="projects-section" id="projects">
+  <div class="container">
+    <span class="section-label">Selected Work</span>
+    <h2>Projects &amp; Clients</h2>
+  </div>
 
-      <p class="hero-description">
-        Building clean, functional websites that solve real problems —
-        from freelance client work to full-stack applications.
-      </p>
+  <!--Project list - alternating image left/right, wrapped in container to keep it compact-->
+  <div class="project-list-container">
+    <div class="project-list">
 
-<!--      Links in hero Section-->
-      <div class="hero-links">
-        <a href="https://github.com/drkmz" target="_blank" rel="noopener">
-          <!-- GitHub icon -->
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/derekmendez" target="_blank" rel="noopener">
-          <!-- LinkedIn icon -->
-          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="pages/projects.html">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          View Work
-        </a>
-      </div>
-    </div>
-
-    <!--Scroll indicator-->
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!--Featured Section-->
-  <section class="featured-strip">
-    <div class="container">
-      <span class="section-label">Selected Work</span>
-      <h2>Projects &amp; Clients</h2>
-
-      <div class="featured-grid">
-
-        <!--Card 1-->
-        <div class="featured-card">
-          <div class="card-tag">Freelance · Live</div>
-          <h3>High Velocity Athletics</h3>
-          <p>Responsive WordPress site for a local athletics business, including full IT infrastructure setup — email systems, business accounts, and ongoing support.</p>
-          <a class="card-link" href="http://it.sportsplusli.com" target="_blank" rel="noopener">
-            View Site &rarr;
+      <!--Project 1 - Farmingdale Gymnastics-->
+      <div class="project-row reveal">
+        <div class="project-image">
+          <a href="http://fgany.com" target="_blank" rel="noopener">
+            <img src="images/fgany.png" alt="Farmingdale Gymnastics and Ninja Academy website screenshot" />
+            <div class="image-overlay"><span>Visit Site &rarr;</span></div>
           </a>
         </div>
-
-        <!--Card 2-->
-        <div class="featured-card">
-          <div class="card-tag">Freelance · Live</div>
+        <div class="project-text">
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <span class="project-status-badge status-live">Live</span>
+          </div>
           <h3>Farmingdale Gymnastics &amp; Ninja Academy</h3>
-          <p>A 10+ page WordPress website built and maintained for a gymnastics academy, with hybrid and remote IT support to keep their online presence running.</p>
-          <a class="card-link" href="http://fgany.com" target="_blank" rel="noopener">
-            View Site &rarr;
+          <p>
+            A 10+ page WordPress website I built and maintained for a local gymnastics academy.
+            Handled everything from the site design to hybrid and remote IT support to keep
+            their operations running day to day.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">IT Support</span>
+          </div>
+          <a href="http://fgany.com" target="_blank" rel="noopener" class="project-link">
+            View Site
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
+      </div>
 
-        <!--Card 3-->
-        <div class="featured-card">
-          <span class="card-status">In Progress</span>
+      <!--Project 2 - SportsPlusLI-->
+      <div class="project-row project-row-reverse reveal">
+        <div class="project-image">
+          <a href="http://it.sportsplusli.com" target="_blank" rel="noopener">
+            <img src="images/sportsplusli.png" alt="SportsPlusLI website screenshot" />
+            <div class="image-overlay"><span>Visit Site &rarr;</span></div>
+          </a>
+        </div>
+        <div class="project-text">
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <span class="project-status-badge status-live">Live</span>
+          </div>
+          <h3>SportsPlusLI</h3>
+          <p>
+            A responsive WordPress site I built for a local athletics business from the ground up.
+            Beyond the website I set up their full IT infrastructure including email systems
+            and business accounts so they were ready to operate from day one.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">IT Setup</span>
+          </div>
+          <a href="http://it.sportsplusli.com" target="_blank" rel="noopener" class="project-link">
+            View Site
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!--Project 3 - SmartPlate (in progress)-->
+      <div class="project-row reveal">
+        <div class="project-image">
+          <div class="project-placeholder placeholder-smartplate">
+            <!--Styled placeholder since SmartPlate is not done yet-->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/>
+            </svg>
+            <span>SmartPlate</span>
+            <small>Coming Soon</small>
+          </div>
+        </div>
+        <div class="project-text">
+          <div class="project-meta">
+            <span class="project-num">03</span>
+            <span class="project-status-badge status-progress">In Progress</span>
+          </div>
           <h3>SmartPlate</h3>
-          <p>A full-stack nutrition app — search recipes, generate personalized meal plans via AI chatbot, and look up nutrition facts using the FDC REST API.</p>
-          <a class="card-link" href="https://github.com/drkmz" target="_blank" rel="noopener">
-            View on GitHub &rarr;
+          <p>
+            A full-stack nutrition app I'm building from scratch. You can search recipes,
+            use an AI chatbot to get a personalized meal plan, and look up nutrition
+            facts for any food using the USDA FDC REST API.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">AI Chatbot</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <a href="https://github.com/drkmz" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
+      </div>
 
-        <!--Card 4-->
-        <div class="featured-card">
-          <span class="card-status">In Progress</span>
+      <!--Project 4 - FugitiveFinder (in progress)-->
+      <div class="project-row project-row-reverse reveal">
+        <div class="project-image">
+          <div class="project-placeholder placeholder-fugitive">
+            <!--Styled placeholder since FugitiveFinder is not done yet-->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><polyline points="17 8 12 13 9 10 7 12"/>
+            </svg>
+            <span>FugitiveFinder</span>
+            <small>Coming Soon</small>
+          </div>
+        </div>
+        <div class="project-text">
+          <div class="project-meta">
+            <span class="project-num">04</span>
+            <span class="project-status-badge status-progress">In Progress</span>
+          </div>
           <h3>FugitiveFinder</h3>
-          <p>A data-driven application pulling from the FBI Wanted API to visualize criminal trends across the US through interactive charts and statistical analysis.</p>
-          <a class="card-link" href="https://github.com/drkmz" target="_blank" rel="noopener">
-            View on GitHub &rarr;
+          <p>
+            A data-driven desktop application pulling from the FBI Wanted API to visualize
+            wanted persons data across the US. Built in Java with a JavaFX front-end,
+            it shows criminal trends through interactive charts and graphs.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">JavaFX</span>
+            <span class="tech-tag">FBI API</span>
+            <span class="tech-tag">Data Viz</span>
+          </div>
+          <a href="https://github.com/drkmz" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
-
       </div>
-    </div>
-  </section>
 
-  <!--Footer-->
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-name">Derek Mendez</span>
-      <span class="footer-copy">&copy; 2025</span>
-      <div class="footer-socials">
-        <a href="https://github.com/drkmz" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/derekmendez" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-      </div>
+    </div><!--end project-list-->
+  </div><!--end project-list-container-->
+</section>
+
+<!--Footer-->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Derek Mendez</span>
+    <span class="footer-copy">&copy; 2025</span>
+    <div class="footer-socials">
+      <a href="https://github.com/drkmz" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/derekmendez" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
     </div>
-  </footer>
-<!--  Insert JavaScript-->
-  <script src="js/main.js"></script>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
