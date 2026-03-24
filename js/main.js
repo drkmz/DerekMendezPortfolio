@@ -1,8 +1,8 @@
 /* =============================================
-   Derek Mendez Portfolio — main.js
+   Derek Mendez Portfolio - main.js
    ============================================= */
 
-// --- Nav scroll effect ---
+//Nav background appears after scrolling down
 const nav = document.querySelector('nav');
 if (nav) {
   window.addEventListener('scroll', () => {
@@ -10,7 +10,7 @@ if (nav) {
   });
 }
 
-// --- Active nav link based on current page ---
+//Highlight the active nav link based on current page
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
   const href = link.getAttribute('href');
@@ -19,7 +19,7 @@ document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
   }
 });
 
-// --- Hamburger menu toggle ---
+//Hamburger menu toggle for mobile
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -30,7 +30,7 @@ if (hamburger && mobileMenu) {
     document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close on link click
+  //Close mobile menu when a link is clicked
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -40,8 +40,24 @@ if (hamburger && mobileMenu) {
   });
 }
 
-// --- Scroll reveal (IntersectionObserver) ---
-const reveals = document.querySelectorAll('.reveal, .project-card');
+//Smooth scroll for anchor links like #projects
+document.querySelectorAll('a[href*="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    const hashIndex = href.indexOf('#');
+    if (hashIndex === -1) return;
+
+    const hash = href.slice(hashIndex);
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+//Scroll-triggered fade-in for .reveal elements and project rows
+const reveals = document.querySelectorAll('.reveal, .project-row');
 if (reveals.length) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -50,12 +66,12 @@ if (reveals.length) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
   reveals.forEach(el => observer.observe(el));
 }
 
-// --- Contact form validation & submission ---
+//Contact form validation and submission
 const form = document.getElementById('contact-form');
 if (form) {
   const nameInput    = document.getElementById('name');
@@ -63,7 +79,6 @@ if (form) {
   const messageInput = document.getElementById('message');
   const successMsg   = document.getElementById('form-success');
 
-  // Real-time validation helpers
   function setError(input, errorId, show) {
     const errEl = document.getElementById(errorId);
     if (show) {
@@ -79,12 +94,11 @@ if (form) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  // Clear errors on input
+  //Clear error state as user types
   [nameInput, emailInput, messageInput].forEach(input => {
     input.addEventListener('input', () => {
       input.classList.remove('error');
-      const errId = input.id + '-error';
-      const errEl = document.getElementById(errId);
+      const errEl = document.getElementById(input.id + '-error');
       if (errEl) errEl.classList.remove('show');
     });
   });
@@ -109,7 +123,6 @@ if (form) {
     }
 
     if (valid) {
-      // Show success — form would connect to Formspree or similar
       form.style.display = 'none';
       successMsg.classList.add('show');
     }
