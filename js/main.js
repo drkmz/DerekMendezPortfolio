@@ -1,6 +1,4 @@
-/* =============================================
-   Derek Mendez Portfolio - main.js
-   ============================================= */
+/* Derek Mendez Portfolio - main.js */
 
 //Nav background appears after scrolling down
 const nav = document.querySelector('nav');
