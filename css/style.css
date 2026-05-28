@@ -474,6 +474,10 @@ nav.scrolled {
   background: linear-gradient(135deg, #0d2240 0%, #1a3a5c 100%);
 }
 
+.placeholder-weathernow {
+  background: linear-gradient(135deg, #0b1d33 0%, #0e3460 50%, #1a5276 100%);
+}
+
 .project-placeholder svg {
   width: 36px;
   height: 36px;
@@ -567,6 +571,12 @@ nav.scrolled {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 /*About Page*/
