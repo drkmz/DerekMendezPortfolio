@@ -575,8 +575,15 @@ nav.scrolled {
 
 .project-links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
   flex-wrap: wrap;
+}
+
+.project-links-sep {
+  color: var(--border);
+  font-size: 0.9rem;
+  user-select: none;
 }
 
 /*About Page*/
