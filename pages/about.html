@@ -44,6 +44,35 @@
       I build websites for real businesses and I love what I do.
       Based in New York, recently graduated, and always working on something new.
     </p>
+    <div class="resume-actions">
+      <a href="../Derek_Mendez_Resume.pdf" download class="btn-resume btn-resume-primary">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
+      <button class="btn-resume btn-resume-secondary btn-resume-preview" onclick="document.getElementById('resumeModal').classList.add('open')">
+        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        Preview
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Resume modal - desktop only-->
+<div class="resume-modal" id="resumeModal">
+  <div class="resume-modal-inner">
+    <div class="resume-modal-header">
+      <span>Derek Mendez — Resume</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <a href="../Derek_Mendez_Resume.pdf" download>
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download
+        </a>
+        <button class="resume-modal-close" onclick="document.getElementById('resumeModal').classList.remove('open')" aria-label="Close">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <iframe src="../Derek_Mendez_Resume.pdf" title="Derek Mendez Resume"></iframe>
   </div>
 </div>
 
@@ -76,7 +105,7 @@
           English and Spanish.
         </p>
         <p>
-          Outside of work I stay active — volleyball is where I unwind.
+          Outside of work I am always staying active. Volleyball is my favorite hobby.
         </p>
 
         <!--Work experience list-->
@@ -195,7 +224,7 @@
 <footer>
   <div class="footer-inner">
     <span class="footer-name">Derek Mendez</span>
-    <span class="footer-copy">&copy; 2025</span>
+    <span class="footer-copy">&copy; 2026</span>
     <div class="footer-socials">
       <a href="https://github.com/drkmz" target="_blank" rel="noopener" aria-label="GitHub">
         <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -208,5 +237,13 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+  document.getElementById('resumeModal').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') document.getElementById('resumeModal').classList.remove('open');
+  });
+</script>
 </body>
 </html>
