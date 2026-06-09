@@ -4,3 +4,6 @@
 node_modules
 dist
 .cache
+*.iml
+.idea/
+.DS_Store
