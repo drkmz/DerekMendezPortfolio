@@ -11,7 +11,7 @@ server.on("request", (req, res) => {
   console.log(url)
   if(url === "/"){
     res.writeHead(200, {"Content-type": "text/html"});
-    fs.createReadStream("../index.html").pipe(res);
+    fs.createReadStream("../websites.html").pipe(res);
   }
   else if(url === "/css/style.css") {
     res.writeHead(200, {"Content-type": "text/css"});

@@ -9,10 +9,10 @@ if (nav) {
 }
 
 //Highlight the active nav link based on current page
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const currentPage = window.location.pathname.split('/').pop() || 'websites.html';
 document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
   const href = link.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+  if (href === currentPage || (currentPage === '' && href === 'websites.html')) {
     link.classList.add('active');
   }
 });
