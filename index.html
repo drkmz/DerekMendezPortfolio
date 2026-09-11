@@ -1,18 +1,17 @@
-<!--test-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Under Construction</title>
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="theme-color" content="#0468FF" />
+  <title>Under construction | New York Life</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     :root {
-      --nyl-blue: #0a6cff;
-      --text: #111827;
-      --muted: #6b7280;
-      --bg: #ffffff;
+      --nyl-blue: #0468FF;
+      --text: #000000;
+      --background: #FFFFFF;
     }
 
     * {
@@ -28,56 +27,82 @@
 
     body {
       min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: var(--bg);
+      background: var(--background);
       color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    main {
-      width: min(92vw, 640px);
-      padding: 48px 24px;
-      text-align: center;
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(32px, 5vw, 72px);
+    }
+
+    .brand {
+      align-self: flex-start;
     }
 
     .logo {
       display: block;
-      width: min(260px, 72vw);
+      width: 9vmax;
+      min-width: 72px;
+      max-width: 150px;
       height: auto;
-      margin: 0 auto 32px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 760px;
+      padding: clamp(48px, 8vh, 112px) 0;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(2rem, 7vw, 4rem);
-      line-height: 1;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .line {
-      width: 72px;
-      height: 4px;
-      margin: 24px auto 0;
-      border-radius: 999px;
-      background: var(--nyl-blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.75rem, 7vw, 6rem);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: -0.035em;
     }
 
     p {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 1rem;
+      margin: 24px 0 0;
+      max-width: 36rem;
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 32px 24px;
+      }
+
+      .logo {
+        width: 18vw;
+        min-width: 72px;
+        max-width: 96px;
+      }
+
+      main {
+        padding: 64px 0 96px;
+      }
     }
   </style>
 </head>
 <body>
-<main>
-  <img class="logo" src="images/logo.png" alt="New York Life" />
-  <h1>Under Construction</h1>
-  <div class="line" aria-hidden="true"></div>
-  <p>Please check back soon.</p>
-</main>
+<div class="page">
+  <header class="brand" aria-label="New York Life">
+    <img class="logo" src="logo.svg" alt="New York Life" />
+  </header>
+
+  <main>
+    <h1>Under construction</h1>
+    <p>Please check back soon.</p>
+  </main>
+</div>
 </body>
 </html>
