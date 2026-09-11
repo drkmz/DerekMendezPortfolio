@@ -46,8 +46,8 @@
     .site-header {
       display: flex;
       align-items: center;
-      height: clamp(86px, 12vh, 112px);
-      padding: 18px clamp(24px, 5vw, 72px);
+      height: clamp(96px, 13vh, 124px);
+      padding: 22px clamp(32px, 6vw, 88px);
       background: var(--white);
       border-bottom: 1px solid var(--light-gray);
       flex-shrink: 0;
@@ -62,7 +62,7 @@
     .hero-wrap {
       min-height: 0;
       display: flex;
-      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px);
+      padding: clamp(20px, 3vh, 34px) clamp(32px, 6vw, 88px) clamp(28px, 4vh, 44px);
     }
 
     .hero {
@@ -134,7 +134,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 10px clamp(24px, 5vw, 72px) 14px;
+      padding: 6px clamp(32px, 6vw, 88px) 12px;
       color: #333333;
       font-size: 0.8rem;
       line-height: 1.4;
@@ -142,13 +142,13 @@
 
     @media (max-height: 760px) and (min-width: 761px) {
       .site-header {
-        height: 82px;
-        padding-top: 14px;
-        padding-bottom: 14px;
+        height: 88px;
+        padding-top: 16px;
+        padding-bottom: 16px;
       }
 
-      .logo { width: 68px; }
-      .hero-wrap { padding-top: 18px; padding-bottom: 18px; }
+      .logo { width: 70px; }
+      .hero-wrap { padding-top: 18px; padding-bottom: 28px; }
       .hero-copy { padding-top: 34px; padding-bottom: 34px; }
       h1 { font-size: clamp(3.2rem, 6vw, 5.8rem); }
       .message { margin-top: 20px; }
@@ -212,7 +212,6 @@
 
   <footer class="site-footer">
     <span>New York Life Insurance Company</span>
-    <span>Website temporarily unavailable</span>
   </footer>
 </div>
 </body>
